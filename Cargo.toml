@@ -1,0 +1,18 @@
+[package]
+name = "funkybrowser"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+eframe = "0.19"
+egui_dock = "0.2"
+url = {version = "2", features = ["serde"]}
+serde = {version = "1", features = ["derive"]}
+germ = {version = "0.3", optional = true}
+
+[features]
+default = ["gemini"]
+
+gemini = ["germ"]
